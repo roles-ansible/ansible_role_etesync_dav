@@ -1,0 +1,5 @@
+---
+etesync_dav__user: 'etesync_dav'
+
+# should we do a version check? (recomended)
+submodules_versioncheck: false
