@@ -1,8 +1,6 @@
 ---
-etesync_dav__repo: 'https://github.com/etesync/server.git'
-etesync_dav__repo_api: 'https://api.github.com/repos/etesync/server/tags'
-etesync_dav__venv: "{{ etesync_dav__venv_path }}/{{ etesync_dav_version_target }}"
+etesync_dav__repo_api: 'https://api.github.com/repos/etesync/etesync-dav/releases/latest'
 
 # versionscheck
-playbook_version_number: 15   # should be a integer
+playbook_version_number: 16
 playbook_version_path: 'role-l3d.etesync_dav.version'

@@ -1,0 +1,12 @@
+---
+- name: Generate etesync-dav.service
+  become: true
+  ansible.builtin.template:
+    src: 'templates/etesync-dav.service.j2'
+    dest: '/usr/lib/systemd/system/etesync-dav.service'
+    mode: '0644'
+    owner: 'root'
+    group: 'root'
+  notify:
+    - 'Run systemctl restart etesync-dav.service'
+    - 'Run systemctl enable etesync-dav.service'

@@ -1,0 +1,11 @@
+{{ ansible_managed | comment }}
+[Unit]
+Description=Cal/CardDAV frontend for Etesync
+
+[Service]
+Type=simple
+Environment=ETESYNC_LISTEN_PORT={{ etesync_dav__port }}
+ExecStart={{ etesync_dav__executable }}
+
+[Install]
+WantedBy=default.target

@@ -1,5 +1,7 @@
 ---
-etesync_dav__user: 'etesync_dav'
+etesync_dav__version: 'latest'
+etesync_dav__executable: '/usr/local/bin/etesync-dav'
+etesync_dav__port: '37358'
 
 # should we do a version check? (recomended)
 submodules_versioncheck: false
