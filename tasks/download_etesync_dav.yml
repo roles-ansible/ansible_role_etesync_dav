@@ -1,10 +1,20 @@
 ---
+- name: "Make sure etesync-dav directory exist"
+  become: true
+  ansible.builtin.file:
+    state: directory
+    path: "{{ etesync_dav__executable }}"
+    mode: '0755'
+    owner: 'root'
+    group: 'root'
+    recurse: true
+
 - name: "Download etesync-dav version v{{ etesync_dav__version_target }}"
   become: true
   ansible.builtin.get_url:
     url: "{{ etesync_dav__dl_url }}"
     dest: "{{ etesync_dav__executable }}"
-    owner: root
-    group: root
+    owner: 'root'
+    group: 'root'
     mode: "0755"
   notify: 'Run systemctl restart etesync-dav.service'
