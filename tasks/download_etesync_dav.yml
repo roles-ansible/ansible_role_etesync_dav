@@ -3,7 +3,7 @@
   become: true
   ansible.builtin.file:
     state: directory
-    path: "{{ etesync_dav__executable }}"
+    path: "{{ etesync_dav__directory }}"
     mode: '0755'
     owner: 'root'
     group: 'root'
