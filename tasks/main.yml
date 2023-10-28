@@ -1,13 +1,17 @@
 ---
 - name: Run optional versionscheck
-  ansible.builtin.include_tasks: versioncheck.yml
+  ansible.builtin.include_tasks:
+    file: versioncheck.yml
   when: submodules_versioncheck | bool
 
 - name: Get Version of etesync-dav
-  ansible.builtin.include_tasks: tasks/get_version_of_etesync_dav.yml
+  ansible.builtin.include_tasks:
+    file: tasks/get_version_of_etesync_dav.yml
 
 - name: Download etesync-dav
-  ansible.builtin.include_tasks: download_etesync_dav.yml
+  ansible.builtin.include_tasks:
+    file: download_etesync_dav.yml
 
 - name: Setup Systemd service
-  ansible.builtin.include_tasks: setup_systemd.yml
+  ansible.builtin.include_tasks:
+    file: setup_systemd.yml
