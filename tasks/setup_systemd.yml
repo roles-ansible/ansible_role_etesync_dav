@@ -10,3 +10,11 @@
   notify:
     - 'Run systemctl restart etesync-dav.service'
     - 'Run systemctl enable etesync-dav.service'
+
+- name: Make sure etesync-dav.service started
+  become: true
+  ansible.builtin.systemd:
+    name: 'etesync-dav.service'
+    enabled: true
+    state: 'started'
+    daemon_reload: true
