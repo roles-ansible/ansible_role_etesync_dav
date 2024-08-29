@@ -14,7 +14,7 @@
 - name: Make sure etesync-dav.service started
   become: true
   ansible.builtin.systemd:
-    name: 'etesync-dav.service'
+    name: 'etesync-dav'
     enabled: true
     state: 'started'
     daemon_reload: true

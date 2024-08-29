@@ -2,7 +2,7 @@
 - name: Run systemctl enable etesync-dav.service
   become: true
   ansible.builtin.systemd:
-    name: 'etesync-dav.service'
+    name: 'etesync-dav'
     enabled: true
     state: 'started'
     daemon_reload: true
@@ -10,6 +10,6 @@
 - name: Run systemctl restart etesync-dav.service
   become: true
   ansible.builtin.systemd:
-    name: 'etesync-dav.service'
+    name: 'etesync-dav'
     enabled: true
     state: 'restarted'
